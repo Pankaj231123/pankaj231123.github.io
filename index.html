@@ -425,6 +425,11 @@
       margin-bottom: 0.75rem;
       letter-spacing: 0.05em;
     }
+    .project-tag { text-decoration: none; cursor: pointer; }
+    .project-tag:hover { background: #a33428; }
+    .project-head h3 a { color: inherit; }
+    .project-head h3 a:hover { border-bottom-color: var(--accent) !important; color: var(--accent); }
+
     .project-stack {
       font-family: var(--font-mono);
       font-size: 0.8rem;
@@ -684,8 +689,8 @@
 
       <div class="project-card reveal">
         <div class="project-head">
-          <span class="project-tag">Live</span>
-          <h3>Texora360</h3>
+          <a class="project-tag" href="https://texora360.com/" target="_blank" rel="noopener">Live ↗</a>
+          <h3><a href="https://texora360.com/" target="_blank" rel="noopener" style="border-bottom: 1px solid var(--line); transition: border-color 0.2s;">Texora360</a></h3>
           <p style="color: var(--muted); font-size: 0.9rem; margin: 0.25rem 0 0.75rem;">Textile Industry Management Platform</p>
           <div class="project-stack">Flutter · Go · PostgreSQL</div>
         </div>
@@ -717,8 +722,8 @@
 
       <div class="project-card reveal">
         <div class="project-head">
-          <span class="project-tag">Live</span>
-          <h3>CITES</h3>
+          <a class="project-tag" href="https://bfis.bforest.gov.bd/bfd-noc/f2/home/" target="_blank" rel="noopener">Live ↗</a>
+          <h3><a href="https://bfis.bforest.gov.bd/bfd-noc/f2/home/" target="_blank" rel="noopener" style="border-bottom: 1px solid var(--line); transition: border-color 0.2s;">CITES</a></h3>
           <p style="color: var(--muted); font-size: 0.9rem; margin: 0.25rem 0 0.75rem;">Government Wildlife Trade System</p>
           <div class="project-stack">PHP · JavaScript · HTML/CSS</div>
         </div>
