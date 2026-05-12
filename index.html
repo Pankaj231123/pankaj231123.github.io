@@ -425,11 +425,6 @@
       margin-bottom: 0.75rem;
       letter-spacing: 0.05em;
     }
-    .project-tag { text-decoration: none; cursor: pointer; }
-    .project-tag:hover { background: #a33428; }
-    .project-head h3 a { color: inherit; }
-    .project-head h3 a:hover { border-bottom-color: var(--accent) !important; color: var(--accent); }
-
     .project-stack {
       font-family: var(--font-mono);
       font-size: 0.8rem;
@@ -456,6 +451,40 @@
       left: 0;
       color: var(--accent);
     }
+    .project-links {
+      margin-top: 1rem;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .project-link {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--ink);
+      padding-bottom: 2px;
+      border-bottom: 1px solid var(--ink);
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .project-link:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+    .project-group-label {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--muted);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin: 3rem 0 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .project-group-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--line);
+    }
+    .project-group-label:first-of-type { margin-top: 0; }
 
     /* ---------- CONTACT ---------- */
     .contact {
@@ -572,9 +601,9 @@
       and <em>Go</em>.
     </h1>
     <p class="hero-sub">
-      I'm Pankaj — a junior software engineer based in Dhaka. I work on production
-      systems across mobile and backend, with a focus on clean APIs, real-time features,
-      and getting the small details right.
+      I'm Pankaj — a junior software engineer based in Dhaka. I build production Go
+      backends and Flutter apps, currently shipping a textile manufacturing ERP. On the
+      side, I'm exploring computer vision and PyTorch, working toward a master's in CS.
     </p>
     <div class="hero-meta">
       <div><span class="meta-label">Based in</span><strong>Dhaka, Bangladesh</strong></div>
@@ -595,18 +624,19 @@
       <div class="about-text reveal">
         <p>
           I graduated from American International University – Bangladesh (AIUB) in 2025
-          with a degree in Computer Science and Engineering, and I joined Software Lighthouse
+          with a degree in Computer Science and Engineering, and joined Software Lighthouse
           shortly after.
         </p>
         <p>
-          Day to day, I work across the stack — writing Go services with Gin and GORM, building
-          Flutter apps, and shipping features for production platforms used by real businesses.
-          I've spent a lot of time recently on real-time systems (Server-Sent Events), API
-          optimization, and untangling tricky frontend state issues.
+          Right now I'm building production Go services with Gin, GORM and PostgreSQL, and
+          shipping Flutter apps for web and mobile — SSE-driven dashboards, offline-first
+          sync, and the unglamorous work of making things actually fast. On the side I run
+          smaller projects in Node, React, and TypeScript.
         </p>
         <p>
-          Outside of work I'm studying in the evenings — currently working through PyTorch
-          fundamentals with an eye on computer vision research and graduate study down the line.
+          In the evenings I'm studying PyTorch and computer vision, working toward
+          reproducing a Vision Transformer paper, and preparing for a master's in CS down
+          the line.
         </p>
       </div>
       <aside class="about-side reveal">
@@ -617,7 +647,7 @@
           <li><span>Location</span><span>Dhaka, BD</span></li>
           <li><span>Education</span><span>AIUB, 2025</span></li>
           <li><span>Focus</span><span>Backend + Mobile</span></li>
-          <li><span>Learning</span><span>PyTorch, System Design</span></li>
+          <li><span>Next</span><span>Master's in CS</span></li>
         </ul>
       </aside>
     </div>
@@ -629,24 +659,24 @@
     <h2 class="section-title">What I <em>work with</em>.</h2>
     <div class="skills-grid">
       <div class="skill-card reveal">
-        <h3>Mobile</h3>
-        <p>Cross-platform apps with Flutter, REST + SSE integration, pagination, and lazy loading.</p>
-        <div class="skill-tags"><span>Flutter</span><span>Dart</span><span>setState</span><span>Firebase</span></div>
-      </div>
-      <div class="skill-card reveal">
         <h3>Backend</h3>
-        <p>REST APIs, real-time streaming, JWT auth, and role-based access in Go and Node.</p>
-        <div class="skill-tags"><span>Go</span><span>Gin</span><span>GORM</span><span>NestJS</span><span>Express</span></div>
+        <p>REST APIs, real-time streaming (SSE), JWT auth, and role-based access control.</p>
+        <div class="skill-tags"><span>Go</span><span>Gin</span><span>GORM</span><span>Node.js</span><span>NestJS</span></div>
       </div>
       <div class="skill-card reveal">
-        <h3>Databases</h3>
+        <h3>Mobile &amp; Frontend</h3>
+        <p>Cross-platform Flutter apps for web and mobile, plus React work in TypeScript.</p>
+        <div class="skill-tags"><span>Flutter</span><span>Dart</span><span>React</span><span>TypeScript</span></div>
+      </div>
+      <div class="skill-card reveal">
+        <h3>Database</h3>
         <p>Relational schema design, query optimization, and ID-based fetching patterns.</p>
         <div class="skill-tags"><span>PostgreSQL</span><span>MySQL</span></div>
       </div>
       <div class="skill-card reveal">
         <h3>Tooling</h3>
-        <p>Comfortable with the everyday tools — Git, Docker, Postman, and Firebase services.</p>
-        <div class="skill-tags"><span>Git</span><span>Docker</span><span>Postman</span></div>
+        <p>The everyday tools — Git, Docker, Postman, and Firebase services.</p>
+        <div class="skill-tags"><span>Git</span><span>Docker</span><span>Postman</span><span>Firebase</span></div>
       </div>
       <div class="skill-card reveal">
         <h3>Concepts</h3>
@@ -654,9 +684,9 @@
         <div class="skill-tags"><span>DSA</span><span>OOP</span><span>System Design</span></div>
       </div>
       <div class="skill-card reveal">
-        <h3>Currently Learning</h3>
-        <p>PyTorch and computer vision fundamentals — building toward a research direction.</p>
-        <div class="skill-tags"><span>PyTorch</span><span>Python</span><span>CV</span></div>
+        <h3>Learning</h3>
+        <p>PyTorch and computer vision — working toward a Vision Transformer paper reproduction.</p>
+        <div class="skill-tags"><span>PyTorch</span><span>Python</span><span>Computer Vision</span></div>
       </div>
     </div>
   </section>
@@ -671,9 +701,10 @@
         <h3 class="exp-role">Junior Software Engineer</h3>
         <div class="exp-company">Software Lighthouse · Dhaka, Bangladesh</div>
         <ul class="exp-list">
+          <li>Building production Go services with Gin, GORM, and PostgreSQL for a textile manufacturing ERP.</li>
+          <li>Shipping Flutter apps for web and mobile — SSE-driven dashboards and offline-first sync.</li>
           <li>Reduced critical page load times by 40%+ through API optimization and eliminating redundant network requests.</li>
           <li>Designed and implemented real-time streaming with Go and Server-Sent Events, replacing inefficient polling.</li>
-          <li>Integrated Flutter frontends with REST APIs — authentication flows, structured error handling, maintainable state.</li>
           <li>Diagnosed and resolved production-level bugs across backend APIs and Flutter applications.</li>
           <li>Worked closely with backend, frontend, and QA teams to ship features on schedule.</li>
         </ul>
@@ -685,13 +716,15 @@
   <section id="projects">
     <div class="section-label">04 — Projects</div>
     <h2 class="section-title">Selected <em>work</em>.</h2>
+
+    <div class="project-group-label">Production work</div>
     <div class="projects-grid">
 
       <div class="project-card reveal">
         <div class="project-head">
-          <a class="project-tag" href="https://texora360.com/" target="_blank" rel="noopener">Live ↗</a>
-          <h3><a href="https://texora360.com/" target="_blank" rel="noopener" style="border-bottom: 1px solid var(--line); transition: border-color 0.2s;">Texora360</a></h3>
-          <p style="color: var(--muted); font-size: 0.9rem; margin: 0.25rem 0 0.75rem;">Textile Industry Management Platform</p>
+          <span class="project-tag">Live</span>
+          <h3>Texora360</h3>
+          <p style="color: var(--muted); font-size: 0.9rem; margin: 0.25rem 0 0.75rem;">Textile manufacturing ERP</p>
           <div class="project-stack">Flutter · Go · PostgreSQL</div>
         </div>
         <div class="project-body">
@@ -722,8 +755,8 @@
 
       <div class="project-card reveal">
         <div class="project-head">
-          <a class="project-tag" href="https://bfis.bforest.gov.bd/bfd-noc/f2/home/" target="_blank" rel="noopener">Live ↗</a>
-          <h3><a href="https://bfis.bforest.gov.bd/bfd-noc/f2/home/" target="_blank" rel="noopener" style="border-bottom: 1px solid var(--line); transition: border-color 0.2s;">CITES</a></h3>
+          <span class="project-tag">Live</span>
+          <h3>CITES</h3>
           <p style="color: var(--muted); font-size: 0.9rem; margin: 0.25rem 0 0.75rem;">Government Wildlife Trade System</p>
           <div class="project-stack">PHP · JavaScript · HTML/CSS</div>
         </div>
@@ -733,6 +766,65 @@
             <li>Implemented hierarchical approval logic with sequential authorization (junior → senior officers) and digital sign-off.</li>
             <li>Diagnosed and resolved production bugs, improving stability for government users.</li>
           </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="project-group-label">Open source &amp; personal</div>
+    <div class="projects-grid">
+
+      <div class="project-card reveal">
+        <div class="project-head">
+          <h3>go-jwt-auth-boilerplate</h3>
+          <p style="color: var(--muted); font-size: 0.9rem; margin: 0.25rem 0 0.75rem;">Production-ready JWT auth in Go</p>
+          <div class="project-stack">Go · JWT · PostgreSQL</div>
+        </div>
+        <div class="project-body">
+          <ul>
+            <li>Access and refresh token flow with sensible defaults for real-world apps.</li>
+            <li>Rate limiting and middleware pipeline for protecting auth endpoints.</li>
+            <li>Clean architecture separating handlers, services, and persistence — easy to drop into a new project.</li>
+          </ul>
+          <div class="project-links">
+            <a class="project-link" href="https://github.com/Pankaj231123/go-jwt-auth-boilerplate" target="_blank" rel="noopener">View on GitHub ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-head">
+          <h3>Feedback Management System</h3>
+          <p style="color: var(--muted); font-size: 0.9rem; margin: 0.25rem 0 0.75rem;">AI-powered feedback classifier</p>
+          <div class="project-stack">Node.js · React · LangChain · Gemini</div>
+        </div>
+        <div class="project-body">
+          <ul>
+            <li>Classifies and routes user feedback using LangChain with Google Gemini as the LLM.</li>
+            <li>React frontend for submitting feedback and viewing categorized results.</li>
+            <li>Node.js backend coordinating the classification pipeline and storage.</li>
+          </ul>
+          <div class="project-links">
+            <a class="project-link" href="https://github.com/Pankaj231123/Feedback_Management_System" target="_blank" rel="noopener">View on GitHub ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-head">
+          <h3>Job Application Tracker</h3>
+          <p style="color: var(--muted); font-size: 0.9rem; margin: 0.25rem 0 0.75rem;">Full-stack tracker for job applications</p>
+          <div class="project-stack">Go · Gin · PostgreSQL · React</div>
+        </div>
+        <div class="project-body">
+          <ul>
+            <li>Go + Gin REST API with PostgreSQL persistence for managing applications, statuses, and notes.</li>
+            <li>React frontend for adding applications, tracking stages, and filtering by status.</li>
+            <li>A practical tool I built to track my own job search, which doubles as a small full-stack reference.</li>
+          </ul>
+          <div class="project-links">
+            <a class="project-link" href="https://github.com/Pankaj231123/job-application-tracker" target="_blank" rel="noopener">View on GitHub ↗</a>
+          </div>
         </div>
       </div>
 
@@ -752,6 +844,7 @@
       <div class="socials">
         <a href="https://github.com/Pankaj231123" target="_blank" rel="noopener">GitHub ↗</a>
         <a href="https://linkedin.com/in/pankaj-roy705/" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <!-- <a href="https://leetcode.com/u/Pankaj102/" target="_blank" rel="noopener">LeetCode ↗</a> -->
         <a href="tel:+8801737890284">+880 1737-890284</a>
       </div>
     </div>
