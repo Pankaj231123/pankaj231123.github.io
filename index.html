@@ -425,6 +425,8 @@
       margin-bottom: 0.75rem;
       letter-spacing: 0.05em;
     }
+    .project-body code { font-family: var(--font-mono); font-size: 0.82em; background: var(--bg-alt); padding: 0.1em 0.35em; border-radius: 3px; }
+
     .project-stack {
       font-family: var(--font-mono);
       font-size: 0.8rem;
@@ -779,6 +781,26 @@
 
     <div class="project-group-label">Open source &amp; personal</div>
     <div class="projects-grid">
+
+      <div class="project-card reveal">
+        <div class="project-head">
+          <span class="project-tag" style="background: #2563eb;">OSS Contribution</span>
+          <h3>Chaos Mesh</h3>
+          <p style="color: var(--muted); font-size: 0.9rem; margin: 0.25rem 0 0.75rem;">Cloud-native Chaos Engineering platform (CNCF)</p>
+          <div class="project-stack">Go · Kubernetes · controller-runtime</div>
+        </div>
+        <div class="project-body">
+          <ul>
+            <li>Fixed silent JSON marshal failures in <code>AWSSelector</code>, <code>GCPSelector</code>, and <code>AzureSelector</code> — replaced blank-identifier error discard with an explicit panic, turning a hidden failure mode into an immediately catchable condition.</li>
+            <li>Fixed context propagation in reconciler functions — replaced <code>context.TODO()</code> with the live context so cancellation signals and deadlines from controller-runtime are properly respected.</li>
+            <li>Fixed error suppression in <code>Client.Get</code> calls and corrected a string literal bug where <code>updateError.Error()</code> was recorded as static text instead of the actual error message, enabling the retry backoff mechanism.</li>
+          </ul>
+          <div class="project-links">
+            <a class="project-link" href="https://github.com/Pankaj231123/chaos-mesh/tree/fix/selector-id-marshal-error-handling" target="_blank" rel="noopener">Branch 1 ↗</a>
+            <a class="project-link" href="https://github.com/Pankaj231123/chaos-mesh/tree/fix/finalizers-context-and-error-handling" target="_blank" rel="noopener">Branch 2 ↗</a>
+          </div>
+        </div>
+      </div>
 
       <div class="project-card reveal">
         <div class="project-head">
