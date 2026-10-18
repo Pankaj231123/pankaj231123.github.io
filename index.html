@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pankaj Roy — Software Engineer</title>
-  <meta name="description" content="Pankaj Roy — Software Engineer working with Flutter, Go, and Node.js. Building production systems in Dhaka, Bangladesh." />
+  <meta name="description" content="Pankaj Roy — Software Engineer in Dhaka working with Go, PostgreSQL, Flutter, and web technologies. Explore my work and projects." />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -603,10 +603,8 @@
       and <em>Go</em>.
     </h1>
     <p class="hero-sub">
-      I'm Pankaj — a junior software engineer based in Dhaka. I build production Go
-      backends and Flutter apps, currently shipping a textile manufacturing ERP. 
-      <!-- On the
-      side, I'm exploring computer vision and PyTorch, working toward a master's in CS. -->
+      I'm Pankaj, a software engineer based in Dhaka. At Software Lighthouse, I work
+      on Go backends and Flutter features for a textile production platform.
     </p>
     <div class="hero-meta">
       <div><span class="meta-label">Based in</span><strong>Dhaka, Bangladesh</strong></div>
@@ -631,10 +629,9 @@
           shortly after.
         </p>
         <p>
-          Right now I'm building production Go services with Gin, GORM and PostgreSQL, and
-          shipping Flutter apps for web and mobile — SSE-driven dashboards, offline-first
-          sync, and the unglamorous work of making things actually fast. On the side I run
-          smaller projects in Node, React, and TypeScript.
+          At Software Lighthouse, I build Go services with Gin, GORM, and PostgreSQL,
+          and work on Flutter screens, API integration, and real-time updates.
+          I also explore Node.js, React, and TypeScript through personal projects.
         </p>
         <!-- <p>
           In the evenings I'm studying PyTorch and computer vision, working toward
@@ -705,11 +702,11 @@
         <div class="exp-company">Software Lighthouse · Dhaka, Bangladesh</div>
         <ul class="exp-list">
           <li>Building production Go services with Gin, GORM, and PostgreSQL for a textile manufacturing ERP.</li>
-          <li>Shipping Flutter apps for web and mobile — SSE-driven dashboards and offline-first sync.</li>
-          <li>Reduced critical page load times by 40%+ through API optimization and eliminating redundant network requests.</li>
-          <li>Designed and implemented real-time streaming with Go and Server-Sent Events, replacing inefficient polling.</li>
+          <li>Building Flutter screens and integrating APIs, including live updates using Server-Sent Events.</li>
+          <li>Reduced initial product listing load time by about 60% by fetching records on demand.</li>
+          <li>Implemented real-time updates with Go and Server-Sent Events, reducing API request volume by approximately 40–50%.</li>
           <li>Diagnosed and resolved production-level bugs across backend APIs and Flutter applications.</li>
-          <li>Worked closely with backend, frontend, and QA teams to ship features on schedule.</li>
+          <li>Collaborated with teammates through Git-based workflows and code reviews, and wrote automated backend tests.</li>
         </ul>
       </div>
     </div>
@@ -780,25 +777,25 @@
 
     </div>
 
-    <div class="project-group-label">Open source &amp; personal</div>
+    <div class="project-group-label">Personal projects</div>
     <div class="projects-grid">
 
       <div class="project-card reveal">
         <div class="project-head">
-          <span class="project-tag" style="background: #2563eb;">OSS Contribution</span>
-          <h3>Chaos Mesh</h3>
-          <p style="color: var(--muted); font-size: 0.9rem; margin: 0.25rem 0 0.75rem;">Cloud-native Chaos Engineering platform (CNCF)</p>
-          <div class="project-stack">Go · Kubernetes · controller-runtime</div>
+          <span class="project-tag" style="background: #2563eb;">In progress</span>
+          <h3>Identity and Access Management (IAM)</h3>
+          <p style="color: var(--muted); font-size: 0.9rem; margin: 0.25rem 0 0.75rem;">Authentication and session management backend</p>
+          <div class="project-stack">Go · GORM · PostgreSQL · Redis · Docker</div>
         </div>
         <div class="project-body">
           <ul>
-            <li>Fixed silent JSON marshal failures in <code>AWSSelector</code>, <code>GCPSelector</code>, and <code>AzureSelector</code> — replaced blank-identifier error discard with an explicit panic, turning a hidden failure mode into an immediately catchable condition.</li>
-            <li>Fixed context propagation in reconciler functions — replaced <code>context.TODO()</code> with the live context so cancellation signals and deadlines from controller-runtime are properly respected.</li>
-            <li>Fixed error suppression in <code>Client.Get</code> calls and corrected a string literal bug where <code>updateError.Error()</code> was recorded as static text instead of the actual error message, enabling the retry backoff mechanism.</li>
+            <li>Implemented Argon2id password hashing and secure opaque token generation with SHA-256 token hashing.</li>
+            <li>Built PostgreSQL user and session repositories, including session revocation and failed-login tracking.</li>
+            <li>Added database migrations and unit tests; configured PostgreSQL and Redis services with Docker Compose.</li>
+            <li>Currently working toward authentication endpoints, middleware, and Redis-based session caching.</li>
           </ul>
           <div class="project-links">
-            <a class="project-link" href="https://github.com/Pankaj231123/chaos-mesh/tree/fix/selector-id-marshal-error-handling" target="_blank" rel="noopener">Branch 1 ↗</a>
-            <a class="project-link" href="https://github.com/Pankaj231123/chaos-mesh/tree/fix/finalizers-context-and-error-handling" target="_blank" rel="noopener">Branch 2 ↗</a>
+            <a class="project-link" href="https://github.com/Pankaj231123/IAM-Identity-and-Access-Management-" target="_blank" rel="noopener">View on GitHub ↗</a>
           </div>
         </div>
       </div>
@@ -806,7 +803,7 @@
       <div class="project-card reveal">
         <div class="project-head">
           <h3>go-jwt-auth-boilerplate</h3>
-          <p style="color: var(--muted); font-size: 0.9rem; margin: 0.25rem 0 0.75rem;">Production-ready JWT auth in Go</p>
+          <p style="color: var(--muted); font-size: 0.9rem; margin: 0.25rem 0 0.75rem;">JWT authentication example in Go</p>
           <div class="project-stack">Go · JWT · PostgreSQL</div>
         </div>
         <div class="project-body">
@@ -866,8 +863,8 @@
       <div class="section-label" style="color: #ff8a7a;">05 — Contact</div>
       <h2>Let's <em>build</em> something.</h2>
       <p>
-        I'm open to junior and mid-level engineering roles, remote or on-site, and
-        happy to chat about backend, mobile, or anything in between.
+        I'm open to software engineering opportunities, remote or on-site,
+        especially in backend, Flutter, and full-stack development.
       </p>
       <a class="contact-email" href="mailto:amipankaj231@gmail.com">amipankaj231@gmail.com</a>
       <div class="socials">
